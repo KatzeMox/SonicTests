@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonic Speed Zone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Top Nav -->
+  <nav class="nav-bar">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="reflex.html" class="nav-link">🌀 Reflex Test</a>
+    <a href="cps.html" class="nav-link">🔥 CPS Test</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Shadow Gif Showcase -->
+    <div class="gif-showcase">
+      <img id="gif1" src="assets/shadow1.gif" alt="Shadow 1" class="shadow-gif" />
+      <img id="gif2" src="assets/shadow2.gif" alt="Shadow 2" class="shadow-gif" style="display: none;" />
+    </div>
+
+    <!-- About Section -->
+    <h1 class="about-title">Cosy's SONIC ZONEEEEE</h1>
+   
+  </div>
+
+  <script>
+    let currentGif = 1;
+    const gif1 = document.getElementById("gif1");
+    const gif2 = document.getElementById("gif2");
+
+    function switchGifs() {
+      if (currentGif === 1) {
+        gif1.style.display = "none";
+        gif2.style.display = "block";
+        currentGif = 2;
+      } else {
+        gif1.style.display = "block";
+        gif2.style.display = "none";
+        currentGif = 1;
+      }
+    }
+
+    setInterval(switchGifs, 2000);  // Switch every 2 seconds
+  </script>
+  
+</body>
+</html>

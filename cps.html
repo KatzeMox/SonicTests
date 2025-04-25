@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CPS Test</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="nav-bar">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="reflex.html" class="nav-link">🌀 Reflex Test</a>
+    <a href="cps.html" class="nav-link">🔥 CPS Test</a>
+  </nav>
+  
+  <div class="container">
+    <h1> CPS Test Mode</h1>
+
+    <div class="mode-select">
+      <button onclick="selectTime(5)">5s</button>
+      <button onclick="selectTime(10)">10s</button>
+      <button onclick="selectTime(15)">15s</button>
+      <button onclick="selectTime(30)">30s</button>
+      <button onclick="selectTime(60)">1min</button>
+    </div>
+
+    <div id="cps-box" class="cps-idle" onclick="handleClick()">
+      <p id="cps-instruction">Select time above, then click here to begin!</p>
+      <p id="cps-result"></p>
+    </div>
+
+    <button id="cps-restart" onclick="resetCPS()" style="display:none;">Restart</button>
+  </div>
+
+  <script src="cps.js"></script>
+</body>
+</html>
